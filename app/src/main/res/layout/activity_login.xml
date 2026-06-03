@@ -28,30 +28,52 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_launcher_background" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <!-- Label NIM -->
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="NIM"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:layout_marginTop="30dp"
-            android:hint="NIM">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_nim"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginBottom="4dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:hintEnabled="false"> <!-- Hint dimatikan agar tidak double dengan label -->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan NIM Anda"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Label Password -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
-            android:hint="Password">
+            app:hintEnabled="false"> <!-- Hint dimatikan agar tidak double dengan label -->
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Masukkan password Anda"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,13 +81,12 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:backgroundTint="@color/primary"
             android:text="LOGIN"
             android:textAllCaps="false"
             app:cornerRadius="12dp" />
 
-        <!-- BAGIAN YANG DIUBAH: Menggunakan LinearLayout horizontal agar teks sejajar -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,7 +105,9 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:textColor="@color/primary"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
         </LinearLayout>
 
     </LinearLayout>
