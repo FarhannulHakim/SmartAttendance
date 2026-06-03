@@ -11,81 +11,162 @@
         android:orientation="vertical"
         android:padding="24dp">
 
+        <!-- Header: Tombol Back & Judul -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/btn_back_login"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Kembali"
+                android:src="@drawable/ic_back"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="REGISTER"
+                android:textColor="@color/primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Input Nama Lengkap -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="REGISTER"
-            android:textColor="@color/primary"
-            android:textSize="22sp"
+            android:text="Nama Lengkap"
+            android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"/>
-
-        <!-- Input Nama -->
+            android:layout_marginBottom="4dp"/>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama Lengkap">
+            android:layout_marginBottom="16dp"
+            app:hintEnabled="false"> <!-- Hint dimatikan karena sudah ada label di atas -->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_reg_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nama lengkap" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Input NIM -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIM"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="NIM">
+            android:layout_marginBottom="16dp"
+            app:hintEnabled="false">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_reg_nim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Masukkan NIM"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Input Kelas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Kelas">
+            android:layout_marginBottom="16dp"
+            app:hintEnabled="false">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_reg_class"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="Masukkan kelas" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Input Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Email">
+            android:layout_marginBottom="16dp"
+            app:hintEnabled="false">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_reg_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Masukkan email"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:passwordToggleEnabled="true"
-            android:hint="Password">
+            android:layout_marginBottom="16dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_reg_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Masukkan password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Konfirmasi Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi Password"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_reg_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ulangi password"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,7 +174,6 @@
             android:id="@+id/btn_register_submit"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="24dp"
             android:text="DAFTAR"
             android:backgroundTint="@color/primary"
             app:cornerRadius="10dp"/>
