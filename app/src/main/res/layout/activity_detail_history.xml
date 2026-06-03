@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detail Absensi"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_detail_selfie"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView android:text="Nama: Wahyu Setiawan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <TextView android:text="NIM: 312410578" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
+            <TextView android:text="Tanggal: 01 Juni 2026" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
+            <TextView android:text="Jam Masuk: 07:05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/green_absen" android:layout_marginBottom="8dp"/>
+            <TextView android:text="Jam Pulang: 16:01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/red_logout" android:layout_marginBottom="8dp"/>
+            <TextView android:text="Lokasi: Kampus ABC" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
