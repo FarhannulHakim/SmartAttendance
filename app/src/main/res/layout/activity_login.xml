@@ -26,7 +26,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/ic_launcher_background" /> <!-- Ganti dengan ilustrasi anda -->
+            android:src="@drawable/ic_launcher_background" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -65,13 +65,27 @@
             android:textAllCaps="false"
             app:cornerRadius="12dp" />
 
-        <TextView
-            android:id="@+id/tv_register"
+        <!-- BAGIAN YANG DIUBAH: Menggunakan LinearLayout horizontal agar teks sejajar -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Belum punya akun? Register"
-            android:textColor="@color/text_secondary" />
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun? "
+                android:textColor="@color/gray_text" />
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="@color/primary"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
