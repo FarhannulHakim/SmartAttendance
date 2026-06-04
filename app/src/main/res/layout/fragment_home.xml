@@ -94,7 +94,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:alpha="0.3"
-                android:src="@drawable/ic_history"
+                android:src="@drawable/ic_calendar"
                 app:tint="@color/white" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -126,7 +126,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_camera"
+                    android:src="@android:drawable/ic_menu_camera"
                     app:tint="@color/primary"/>
                 <TextView
                     android:layout_width="wrap_content"

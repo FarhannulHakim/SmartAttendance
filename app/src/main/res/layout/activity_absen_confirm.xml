@@ -7,15 +7,31 @@
     android:background="@color/white"
     android:padding="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ABSEN MASUK"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/primary"
-        android:layout_gravity="center"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="24dp">
+
+        <ImageButton
+            android:id="@+id/btn_back_absen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            android:src="@drawable/ic_back"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ABSEN MASUK"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <!-- Preview Foto Hasil Kamera -->
     <com.google.android.material.card.MaterialCardView
@@ -34,53 +50,127 @@
     </com.google.android.material.card.MaterialCardView>
 
     <!-- Detail Info Otomatis -->
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E0E0E0"
+        android:layout_marginBottom="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tanggal"
-            android:textColor="@color/gray_text"
-            android:textSize="12sp"/>
-        <TextView
-            android:id="@+id/tv_confirm_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="01 Juni 2026"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp"/>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jam"
-            android:textColor="@color/gray_text"
-            android:textSize="12sp"/>
-        <TextView
-            android:id="@+id/tv_confirm_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="07:15"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp"/>
+            <!-- Baris Tanggal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lokasi"
-            android:textColor="@color/gray_text"
-            android:textSize="12sp"/>
-        <TextView
-            android:id="@+id/tv_confirm_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kampus ABC"
-            android:textStyle="bold"/>
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="@color/primary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal"
+                        android:textColor="@color/gray_text"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/tv_confirm_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01 Juni 2026"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Baris Jam -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    app:tint="@color/primary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jam"
+                        android:textColor="@color/gray_text"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/tv_confirm_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07:15"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Baris Lokasi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/primary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi"
+                        android:textColor="@color/gray_text"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/tv_confirm_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kampus ABC"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <View
         android:layout_width="match_parent"
