@@ -232,21 +232,48 @@
         </com.google.android.material.card.MaterialCardView>
     </GridLayout>
 
+    <!-- Spacer untuk mendorong tombol ke bawah -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
+    <!-- Tombol Logout dalam Kotak (Card) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_logout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:text="LOGOUT"
-        android:textColor="@color/red_logout"
-        app:icon="@drawable/ic_logout"
-        app:iconTint="@color/red_logout"
-        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/red_logout"
+        app:strokeWidth="1dp"
+        android:clickable="true"
+        android:focusable="true">
 
+        <LinearLayout
+            android:id="@+id/btn_logout_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_logout"
+                app:tint="@color/red_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="LOGOUT"
+                android:textColor="@color/red_logout"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
